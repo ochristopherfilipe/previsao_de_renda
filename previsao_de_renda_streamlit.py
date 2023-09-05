@@ -24,10 +24,12 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home"
                                         )
 
 with tab1:
-
+     # abrindo o arquivo
     df = pd.read_csv('./input/previsao_de_renda.csv')
+     # definindo uma mascara para outliers
     mascara = (df['renda'] <= 20000) & (df['renda'] >= 500)
     df = df[mascara]
+     # rodando o modelo statsmodel
     reg = smf.ols('renda ~ sexo + posse_de_veiculo + posse_de_imovel + qtd_filhos + educacao + estado_civil + tipo_residencia + idade + tempo_emprego + qt_pessoas_residencia ''', data = df).fit()
 
     def predict_income(sexo, posse_de_veiculo, posse_de_imovel, qtd_filhos, educacao, estado_civil, tipo_residencia, idade, tempo_emprego, qt_pessoas_residencia):
