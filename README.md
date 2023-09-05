@@ -4,5 +4,4 @@ O objetivo desta análise é prever a variação de renda dos clientes de uma in
 
 ## Streamlit:
 
-https://github.com/ochristopherfilipe/previsao_de_renda/assets/112826117/9381078c-e839-4203-a9ac-3ac23e3211f0
-
+https://github.com/ochristopherfilipe/previsao_de_renda/assets/112826117/112f9f52-c22d-4bb8-b573-76e5da5ef264
