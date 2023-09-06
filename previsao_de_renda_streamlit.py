@@ -25,7 +25,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["Home"
 
 with tab1:
      # abrindo o arquivo
-    df = pd.read_csv('./input/previsao_de_renda.csv')
+    df = pd.read_csv('previsao_de_renda.csv')
      # definindo uma mascara para outliers
     mascara = (df['renda'] <= 20000) & (df['renda'] >= 500)
     df = df[mascara]
