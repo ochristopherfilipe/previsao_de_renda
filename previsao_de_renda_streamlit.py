@@ -57,7 +57,7 @@ with tab1:
     # Interface do aplicativo usando Streamlit
         
     st.title('Análise exploratória da :green[Previsão de Renda]')
-    st.markdown('#### Aqui você encontra informações referentes aos estudos de previsão de renda')
+    st.markdown('#### Nas abas aqui dispostas, você encontrá informações referentes aos estudos de previsão de renda')
     st.markdown("##### O objetivo desta análise é prever a variação de renda dos clientes de uma instituição financeira. Os dados utilizados na análise e previsão foram coletados e distribuidos em variáveis com características diversas que auxiliam na previsão ou explicação da renda de um cliente.")
     st.markdown("---")
 
@@ -140,7 +140,7 @@ with tab3:
     st.divider()
 
     # Criar subplots
-    fig, ax = plt.subplots(6, 1, figsize=(5, 20), sharex=True, gridspec_kw={'hspace': 0.5})
+    fig, ax = plt.subplots(6, 1, figsize=(10, 40), sharex=True, gridspec_kw={'hspace': 0.5})
 
     # Gráfico 1
     sns.lineplot(x='data_ref', y='renda', hue='posse_de_imovel', data=df, ax=ax[0])
@@ -182,7 +182,7 @@ with tab4:
 
     st.write('# Gráficos das análises bivariadas')
     st.divider()
-    fig, ax = plt.subplots(7,1,figsize=(5,20))
+    fig, ax = plt.subplots(7,1,figsize=(10,40))
     sns.barplot(x='posse_de_imovel',y='renda',data=df, ax=ax[0])
     sns.barplot(x='posse_de_veiculo',y='renda',data=df, ax=ax[1])
     sns.barplot(x='qtd_filhos',y='renda',data=df, ax=ax[2])
